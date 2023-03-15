@@ -11,17 +11,18 @@ japanese_food = ['라멘', '우동', '돈카츠', '스시', '규동']
 chinese_food = ['짜장면', '짬뽕', '탕수육', '양장피', '팔보채', '해물짬뽕'] #issue '해물짬뽕' 추가 완료
 Aisian_food = ['팟타이', '시니강', '나시고랭'] #김대현 issue제기에 의해 Aisian food list 추가
 
+food_categories = {
+    '한식': korean_food,
+    '양식': western_food,
+    '일식': japanese_food,
+    '중식': chinese_food,
+    '아시안식': Aisian_food
+}
+
 # 음식 종류를 무작위로 1가지 선택
-menu_type = random.choice(['한식', '양식', '일식', '중식'])
+menu_type = random.choice(list(food_categories.keys()))
 
 # 선택한 음식 종류에 따라 음식 리스트를 정하고, 임의의 1가지 음식 추천
-if menu_type == '한식':
-    menu = random.choice(korean_food)
-elif menu_type == '양식':
-    menu = random.choice(western_food)
-elif menu_type == '일식':
-    menu = random.choice(japanese_food)
-else:
-    menu = random.choice(chinese_food)
+recommended_menu = random.choice(food_categories[menu_type])
 
 print(f"{menu_type} 중에서 {menu} 추천합니다!")
