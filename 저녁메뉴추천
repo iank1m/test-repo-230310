@@ -10,13 +10,15 @@ western_food = ['스파게티', '피자', '스테이크', '바게트 샌드위�
 japanese_food = ['라멘', '우동', '돈카츠', '스시', '규동', '규카츠', '소바']
 chinese_food = ['짜장면', '짬뽕', '탕수육', '양장피', '팔보채', '해물짬뽕', '깐쇼새우', '잡채밥'] #issue '해물짬뽕' 추가 완료
 Aisian_food = ['팟타이', '시니강', '나시고랭'] #김대현 issue제기에 의해 Aisian food list 추가
+Arabian_food ['대추야쟈', '양고기', '염소고기', '팔라펠', '커피', '쿠스쿠스'] # 3/24 새로 추가
 
 food_categories = {
     '한식': korean_food,
     '양식': western_food,
     '일식': japanese_food,
     '중식': chinese_food,
-    '아시안식': Aisian_food
+    '아시안식': Aisian_food,
+    '아라비안식': Arabian_food # 3/24 새로 추가
 }
 
 # 음식 종류를 무작위로 1가지 선택
