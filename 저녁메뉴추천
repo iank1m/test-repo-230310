@@ -25,4 +25,4 @@ menu_type = random.choice(list(food_categories.keys()))
 # 선택한 음식 종류에 따라 음식 리스트를 정하고, 임의의 1가지 음식 추천
 recommended_menu = random.choice(food_categories[menu_type])
 
-print(f"{menu_type} 중에서 {menu} 추천합니다!")
+print(f"{menu_type} 중에서 {recommended_menu} 추천합니다!")
