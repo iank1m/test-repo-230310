@@ -26,3 +26,4 @@ menu_type = random.choice(list(food_categories.keys()))
 recommended_menu = random.choice(food_categories[menu_type])
 
 print(f"{menu_type} 중에서 {menu} 추천합니다!")
+print("다음에 또 이용해주세요!")
