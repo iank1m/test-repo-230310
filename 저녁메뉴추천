@@ -19,10 +19,18 @@ food_categories = {
     '아시안식': Aisian_food
 }
 
-# 음식 종류를 무작위로 1가지 선택
-menu_type = random.choice(list(food_categories.keys()))
+while 1:
+    # 음식 종류를 무작위로 1가지 선택
+    menu_type = random.choice(list(food_categories.keys()))
 
-# 선택한 음식 종류에 따라 음식 리스트를 정하고, 임의의 1가지 음식 추천
-recommended_menu = random.choice(food_categories[menu_type])
+    # 선택한 음식 종류에 따라 음식 리스트를 정하고, 임의의 1가지 음식 추천
+    recommended_menu = random.choice(food_categories[menu_type])
 
-print(f"{menu_type} 중에서 {menu} 추천합니다!")
+    print(f"{menu_type} 중에서 {menu} 추천합니다!")
+    print("만약 메뉴가 마음에 든다면 Y를 입력해 종료, 마음에 들지 않다면 아무거나 입력하여 다시 한번 추천받아보세요!" )
+    
+    answer=input()
+    if answer == 'Y' or answer == 'y':
+        break
+    else:
+        continue
