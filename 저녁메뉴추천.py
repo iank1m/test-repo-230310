@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 #저녁 메뉴를 추천해주는 코드
 #오픈소스SW 전병환 교수님 수업 실습 
 #202000904 김이안
@@ -8,15 +10,15 @@ import random
 korean_food = ['김치찌개', '불고기', '비빔밥', '순두부찌개', '된장찌개', '김밥']
 western_food = ['스파게티', '피자', '스테이크', '바게트 샌드위치', '파스타', '햄버거', '크림새우', '감자튀김']
 japanese_food = ['라멘', '우동', '돈카츠', '스시', '규동', '규카츠', '소바']
-chinese_food = ['짜장면', '짬뽕', '탕수육', '양장피', '팔보채', '해물짬뽕', '깐쇼새우', '잡채밥'] #issue '해물짬뽕' 추가 완료
-Aisian_food = ['팟타이', '시니강', '나시고랭'] #김대현 issue제기에 의해 Aisian food list 추가
+chinese_food = ['짜장면', '짬뽕', '탕수육', '양장피', '팔보채', '해물짬뽕', '깐쇼새우', '잡채밥']
+asian_food = ['팟타이', '시니강', '나시고랭']
 
 food_categories = {
     '한식': korean_food,
     '양식': western_food,
     '일식': japanese_food,
     '중식': chinese_food,
-    '아시안식': Aisian_food
+    '아시안식': asian_food
 }
 
 # 음식 종류를 무작위로 1가지 선택
@@ -25,4 +27,5 @@ menu_type = random.choice(list(food_categories.keys()))
 # 선택한 음식 종류에 따라 음식 리스트를 정하고, 임의의 1가지 음식 추천
 recommended_menu = random.choice(food_categories[menu_type])
 
-print(f"{menu_type} 중에서 {menu} 추천합니다!")
+print(f"{menu_type} 중에서 {recommended_menu}을(를) 추천합니다!")
+
